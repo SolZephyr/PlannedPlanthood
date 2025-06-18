@@ -4,14 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" class="css">
   <link rel="stylesheet" href="style.css" />
   <title>Planned Planthood</title>
+  <meta name="description" content="Planned Planthood description">
 </head>
 
 <body>
+
   <header class="main-header">
     <section data-debug>
-      <h1 class="hidden">Planned Planthood</h1>
+      <h1 class="visually-hidden">Planned Planthood</h1>
       <figure class="logotype">
         <svg width="214" height="210" viewBox="0 0 214 210" xmlns="http://www.w3.org/2000/svg">
           <g fill="none">
@@ -33,7 +36,7 @@
       </nav>
       <nav class="mode-mobile">
         <a href="#">
-          <svg width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="_icons">
               <path d="M5,7h14c0.6,0,1-0.4,1-1s-0.4-1-1-1H5C4.4,5,4,5.4,4,6S4.4,7,5,7z" />
               <path d="M5,13h14c0.6,0,1-0.4,1-1s-0.4-1-1-1H5c-0.6,0-1,0.4-1,1S4.4,13,5,13z" />
@@ -44,57 +47,63 @@
       </nav>
     </section>
   </header>
+
   <main>
     <section class="main-section">
-      <div class="main-welcome" data-debug>
+      <div class="main-hero" data-debug>
         <!-- Introduction -->
         <h2>Uppskattade växter</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
         <ul class="img-composite" role="list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><img src="https://picsum.photos/id/100/400" width="100" height="100" alt=""></li>
+          <li><img src="https://picsum.photos/id/200/400" width="100" height="100" alt=""></li>
+          <li><img src="https://picsum.photos/id/300/400" width="100" height="100" alt=""></li>
+          <li><img src="https://picsum.photos/id/400/400" width="100" height="100" alt=""></li>
+          <li><img src="https://picsum.photos/id/500/400" width="100" height="100" alt=""></li>
+          <li><img src="https://picsum.photos/id/600/400" width="100" height="100" alt=""></li>
         </ul>
       </div>
     </section>
+
     <section class="main-section">
       <div class="main-newsletter" data-debug>
         <!-- Newletter -->
-        <form action="">
-          <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-          <input type="email" name="" id="newsletter_email" placeholder="email@domain.com">
-          <button>Skicka</button>
-        </form>
+        <aside>
+          <form >
+            <h2 id="aria-newsletter">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+            <input type="email" name="" id="newsletter_email" placeholder="email@domain.com" maxlength="50"
+              aria-describedby="aria-newsletter">
+            <button class="button button-primary">SKICKA</button>
+          </form>
+        </aside>
         <figure class="label label-plant">
-          <img src="/Assets/images/icon-planting.svg" width="100" height="100" alt="">
+          <img src="/Assets/images/icon-planting.svg" width="180" height="180" alt="">
         </figure>
       </div>
     </section>
+
     <section class="main-section">
       <div class="main-list" data-debug>
         <!-- List -->
-        <h2 class="hidden">Odlingar</h2>
+        <h2 class="visually-hidden">Odlingar</h2>
         <ul class="card-list" role="list">
           <li class="card-item">
             <article>
               <figure>
-                <img src="" width="200" height="250" alt="plant" data-debug>
+                <img src="https://picsum.photos/200" width="200" height="250" alt="plant">
               </figure>
               <div class="watermark"></div>
               <ul class="tags">
-                <li>Blommor</li>
-                <li>Ätbart</li>
-                <li>Grönska</li>
+                <li data-flower>Blommor</li>
+                <li data-edible>Ätbart</li>
+                <li data-green>Grönska</li>
               </ul>
               <h3>Gurka</h3>
               <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
                 omplantering, duschning och gödsling.</p>
               <footer>
                 <figure>
-                  <img src="" width="100" height="100" alt="avatar" data-debug>
+                  <img src="https://avatar.iran.liara.run/public/19" width="100" height="100" alt="avatar">
                 </figure>
                 <aside>
                   <p>Coolio</p>
@@ -106,24 +115,23 @@
           <li class="card-item">
             <article>
               <figure>
-                <img src="" width="200" height="250" alt="plant" data-debug>
+                <img src="https://picsum.photos/200" width="200" height="250" alt="plant">
               </figure>
               <div class="watermark"></div>
               <ul class="tags">
-                <li>Blommor</li>
-                <li>Ätbart</li>
-                <li>Grönska</li>
+                <li data-sunloving>Solälskande</li>
+                <li data-easy>Lättodlat</li>
+                <li data-edible>Ätbart</li>
               </ul>
-              <h3>Gurka</h3>
-              <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
-                omplantering, duschning och gödsling.</p>
+              <h3>Tomat</h3>
+              <p>En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.</p>
               <footer>
                 <figure>
-                  <img src="" width="100" height="100" alt="avatar" data-debug>
+                  <img src="https://avatar.iran.liara.run/public/94" width="100" height="100" alt="avatar">
                 </figure>
                 <aside>
-                  <p>Coolio</p>
-                  <time datetime="2024-04-01">2024-04-01</time>
+                  <p>Anna Odlare</p>
+                  <time datetime="2024-12-05">2024-12-05</time>
                 </aside>
               </footer>
             </article>
@@ -131,24 +139,23 @@
           <li class="card-item">
             <article>
               <figure>
-                <img src="" width="200" height="250" alt="plant" data-debug>
+                <img src="https://picsum.photos/200" width="200" height="250" alt="plant">
               </figure>
               <div class="watermark"></div>
               <ul class="tags">
-                <li>Blommor</li>
-                <li>Ätbart</li>
-                <li>Grönska</li>
+                <li data-decorative>Dekorativ</li>
+                <li data-colorful>Färgstark</li>
+                <li data-robust>Tålig</li>
               </ul>
-              <h3>Gurka</h3>
-              <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
-                omplantering, duschning och gödsling.</p>
+              <h3>Pelargon</h3>
+              <p>En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
               <footer>
                 <figure>
-                  <img src="" width="100" height="100" alt="avatar" data-debug>
+                  <img src="https://avatar.iran.liara.run/public/38" width="100" height="100" alt="avatar">
                 </figure>
                 <aside>
-                  <p>Coolio</p>
-                  <time datetime="2024-04-01">2024-04-01</time>
+                  <p>Blomsterkalle</p>
+                  <time datetime="2024-12-03">2024-12-03</time>
                 </aside>
               </footer>
             </article>
@@ -156,6 +163,7 @@
         </ul>
       </div>
     </section>
+
     <section class="main-section">
       <div class="main-history" data-debug>
         <!-- History-->
@@ -167,11 +175,12 @@
           <a href="#" class="button">Planterade plantor</a>
         </aside>
         <figure class="label label-seed">
-          <img src="/Assets/images/icon-seedling.svg" width="100" height="100" alt="">
+          <img src="/Assets/images/icon-seedling.svg" width="180" height="180" alt="">
         </figure>
       </div>
     </section>
   </main>
+
   <footer class="main-footer">
     <section data-debug>
       <aside>
@@ -190,14 +199,12 @@
           perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius
           molestias?</p>
         <ul role="list">
-          <li><img src="/Assets/images/icon-phone.svg" class="link-tel"><a href="tel:020-1234567">Telefon:
-              020-1234567</a></li>
-          <li><img src="/Assets/images/icon-email.svg" class="link-mail"><a href="mailto:"
-              info@plannedplant.com>info@plannedplant.com</a></li>
+          <li><a href="tel:020-1234567" class="link-tel">Telefon: 020-1234567</a></li>
+          <li><a href="mailto:info@plannedplant.com" class="link-mail">info@plannedplant.com</a></li>
         </ul>
       </aside>
       <nav>
-        <ul role="list">
+        <ul role="list" class="mode-desktop">
           <li><a href="#/">Hem</a></li>
           <li><a href="#">Historik</a></li>
           <li><a href="#">Tips</a></li>
