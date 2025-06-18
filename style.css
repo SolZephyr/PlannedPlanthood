@@ -75,13 +75,13 @@
 }
 
 .mode-mobile {
-  @media (width >=768px) {
+  @media (width > 768px) {
     display: none !important;
   }
 }
 
 .mode-desktop {
-  @media (width < 768px) {
+  @media (width <=768px) {
     display: none !important;
   }
 }
@@ -98,16 +98,23 @@
 }
 
 /* Global/base */
+body {
+  font-family: var(--font-base);
+  background-color: var(--clr-accent-light-1);
+  color: var(--clr-primary-dark);
+  min-height: 100vh;
+}
+
 h2,
 h3 {
   font-weight: var(--fw-bold);
   line-height: 1;
-  margin-block: 1.5rem;
+  margin-block: 1rem;
+  width: 100%;
 }
 
 h2 {
   font-size: max(var(--fs-700), 1rem);
-  text-align: center;
 }
 
 h3 {
@@ -130,7 +137,7 @@ a {
   }
 }
 
-@media (width < 800px) {
+/*@media (width < 800px) {
   h2 {
     font-size: var(--fs-800);
   }
@@ -142,20 +149,12 @@ a {
   a {
     font-weight: var(--fw-500);
   }
-}
-
-body {
-  font-family: var(--font-base);
-  background-color: var(--clr-accent-light-1);
-  color: var(--clr-primary-dark);
-  min-height: 100vh;
-}
+}*/
 
 .button {
   min-width: 8rem;
-  width: 100%;
   border-radius: 5rem;
-  padding: 1rem 1rem;
+  padding: .5rem 1rem;
   margin-block: 1rem;
   background-color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
@@ -171,7 +170,11 @@ body {
     background-color: var(--clr-primary-light-1);
     color: var(--clr-accent);
     text-decoration: none;
-    ;
+  }
+
+  @media (width < 425px) {
+    width: 100%;
+    padding: 1rem;
   }
 }
 
@@ -276,6 +279,8 @@ header.main-header {
   }
 
   figure.logotype figcaption {
+
+    /* Hides logo text on compact*/
     @media (width < 350px) {
       clip: rect(0 0 0 0);
       clip-path: inset(50%);
@@ -307,10 +312,11 @@ header.main-header {
 
 footer.main-footer {
   background-color: var(--clr-accent);
+  margin-top: 3rem;
 
   section {
-    padding-block: 4rem;
-    color: white;
+    padding-block: 3rem;
+    color: var(--clr-neutral-100);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -322,7 +328,7 @@ footer.main-footer {
   }
 
   a {
-    color: white;
+    color: var(--clr-neutral-100);
   }
 
   figure.logotype {
@@ -336,14 +342,13 @@ footer.main-footer {
   }
 
   aside {
-
     li {
       margin-bottom: 1rem;
     }
 
-    @media screen and (width >=960px) {
+    /*@media screen and (width >=960px) {
       padding-inline: 0;
-    }
+    }*/
   }
 
   nav {
@@ -364,15 +369,17 @@ section.main-section {
 
   >div {
     padding-block: 3rem;
+
+    >:is(h2, p, aside) {
+      text-align: center;
+      text-wrap-style: balance;
+    }
   }
 }
 
 main .main-hero {
-
   > :not(ul) {
     margin-bottom: 1.5rem;
-    text-align: center;
-    text-wrap-style: balance;
   }
 
   ul {
@@ -388,7 +395,7 @@ main .main-hero {
       "img5"
       "img6";
 
-    @media screen and (width > 425px) {
+    @media screen and (width >=425px) {
       grid-template-areas:
         "img1 img2"
         "img3 img4"
@@ -409,7 +416,6 @@ main .main-hero {
   }
 
   li {
-    border: 1px solid red;
     overflow: hidden;
 
     &:first-child {
@@ -456,31 +462,41 @@ main div:is(.main-newsletter, .main-history) {
     flex-direction: row;
   }*/
 
-  aside {
+  aside, form {
     display: grid;
     grid-template-rows: auto auto;
     justify-items: flex-end;
   }
 
   input {
-      /*padding: .5rem 10rem .5rem .5rem;*/
-      width: 100%;
-      padding: 1rem;
-      background-color: var(--clr-primary-light-1);
-      border-radius: 5rem;
-      border: 1px solid var(--clr-primary-dark);
-      text-align: center;
-      color: var(--clr-primary-dark);
-      font-size: 1.2em;
-      margin: .5rem .5rem .5rem auto;
-    }
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--clr-primary-light-1);
+    border-radius: 5rem;
+    border: 1px solid var(--clr-primary-dark);
+    text-align: center;
+    color: var(--clr-primary-dark);
+    font-size: 1.2em;
+  }
 
-    /*input, button {
+  @media (width >=425px) {
+    /* Move button. over input */
+    input, button {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
-    }*/
+    }
 
-    /*figure {
+    button {
+      width: 5rem;
+      margin: .3rem .3rem .3rem .3rem;
+    }
+
+    input {
+      padding-right: 9rem;
+    }
+  }
+
+  /*figure {
       order: -1;
     }
 
@@ -607,7 +623,7 @@ main .main-list {
     background-color: var(--clr-fast),
   }
 
-  
+
 
   ul.img-composite, .card-item {
     box-shadow: var(--border-shadow);
