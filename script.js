@@ -72,7 +72,8 @@ const posts = [
 ];
 
 function populate() {
-    document.getElementById("posts").innerHTML = "";
+    let element = document.getElementById("posts_js");
+    element.innerHTML = "";
     posts.forEach(addItem);
 
     function addItem(item) {
@@ -87,9 +88,9 @@ function populate() {
 
         let html = [];
         html.push('<li class="card-item">', '<article>');
-        html.push('<figure><img src="', image, '" width="200" height="250" alt="Bild på ', title, ' från ', author, '"></figure>');
-        html.push('<div class="watermark"></div>');
-        html.push('<ul class="tags">');
+        html.push('<figure class="card-item__image"><img src="', image, '" width="200" height="250" alt="Bild på ', title, ' från ', author, '"></figure>');
+        html.push('<div class="card-item__watermark"></div>');
+        html.push('<ul class="card-item__tags">');
 
         tags.forEach(addTag);
         function addTag(tag) {
@@ -98,14 +99,13 @@ function populate() {
         }
 
         html.push('</ul>');
-        html.push('<h3>', title, '</h3>');
-        html.push('<p>', content, '</p>');
-        html.push('<footer>');
-        html.push('<figure><img src="', avatar, '" width="100" height="100" alt="Visningsbild för ', author, ' "></figure>');
-        html.push('<aside><p>', author, '</p><time datetime="', date, '">', date, '</time></aside>');
+        html.push('<h3 class="card-item__title">', title, '</h3>');
+        html.push('<p class="card-item__content">', content, '</p>');
+        html.push('<footer class="card-item-footer">');
+        html.push('<figure><img class="card-item-footer__avatar" src="', avatar, '" width="100" height="100" alt="Visningsbild för ', author, ' "></figure>');
+        html.push('<aside><p class="card-item-footer__username">', author, '</p><time class="card-item-footer__date" datetime="', date, '">', date, '</time></aside>');
         html.push('</footer></article></li>');
-        let posts = document.getElementById("posts");
-        posts.innerHTML += html.join("");
+        element.innerHTML += html.join("");
     }
 }
 

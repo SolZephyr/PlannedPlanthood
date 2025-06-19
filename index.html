@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="reset.css" class="css">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
   <script src="/script.js"></script>
   <title>Planned Planthood</title>
@@ -13,7 +13,7 @@
 
 <body>
 
-  <header class="main-header">
+  <header class="page-header">
     <section>
       <h1 class="visually-hidden">Planned Planthood</h1>
       <figure class="logotype">
@@ -27,7 +27,7 @@
         </svg>
         <figcaption>Planned Planthood</figcaption>
       </figure>
-      <nav class="mode-desktop">
+      <nav data-desktop>
         <ul role="list">
           <li><a href="#">HEM</a></li>
           <li><a href="#">HISTORIK</a></li>
@@ -35,7 +35,7 @@
           <li><a href="#">KONTAKT</a></li>
         </ul>
       </nav>
-      <nav class="mode-mobile">
+      <nav data-mobile>
         <a href="#">
           <small class="visually-hidden">Hamburgermeny</small>
           <svg width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
         <!-- Introduction -->
         <h2>Uppskattade växter</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
-        <ul class="img-composite" role="list">
+        <ul class="main-hero-composite" role="list">
           <li><img src="https://picsum.photos/id/100/400" width="100" height="100" alt="Slumpad kollagebild 1"></li>
           <li><img src="https://picsum.photos/id/200/400" width="100" height="100" alt="Slumpad kollagebild 2"></li>
           <li><img src="https://picsum.photos/id/300/400" width="100" height="100" alt="Slumpad kollagebild 3"></li>
@@ -79,38 +79,36 @@
             <button class="button button-primary">SKICKA</button>
           </form>
         </aside>
-        <div class="label label-seed">
-          <figure>
-            <img src="/Assets/images/icon-planting.svg" width="180" height="180" alt="En ikon på plantering av frön.">
-          </figure>
-        </div>
+        <figure class="section-label section-label--seed">
+          <img src="/Assets/images/icon-planting.svg" width="180" height="180" alt="En ikon på plantering av frön.">
+        </figure>
       </div>
     </section>
 
     <section class="main-section">
-      <div class="main-list">
+      <div>
         <!-- List -->
         <h2 class="visually-hidden">Odlingar</h2>
-        <ul class="card-list" id="posts" role="list">
+        <ul class="main-section__list" id="posts_js" role="list">
 
           <!--<li class="card-item">
             <article>
-              <figure>
+              <figure class="card-item__image">
                 <img src="" width="200" height="250" alt="växt">
               </figure>
-              <div class="watermark"></div>
-              <ul class="tags">
+              <div class="card-item__watermark"></div>
+              <ul class="card-item__tags">
                 <li data-flower>Tagg</li>
               </ul>
-              <h3>Titel</h3>
-              <p>Innehåll.</p>
-              <footer>
+              <h3 class="card-item__title">Titel</h3>
+              <p class="card-item__content">Innehåll.</p>
+              <footer class="card-item-footer">
                 <figure>
-                  <img src="" width="100" height="100" alt="avatar">
+                  <img class="card-item-footer__avatar" src="" width="100" height="100" alt="avatar">
                 </figure>
                 <aside>
-                  <p>Användare</p>
-                  <time datetime="2025-01-01">2025-01-01</time>
+                  <p class="card-item-footer__username">Användare</p>
+                  <time class="card-item-footer__date" datetime="2025-01-01">2025-01-01</time>
                 </aside>
               </footer>
             </article>
@@ -130,18 +128,16 @@
             quaerat doloribus?</p>
           <a href="#" class="button">Planterade plantor</a>
         </aside>
-        <div class="label label-plant">
-          <figure>
-            <img src="/Assets/images/icon-seedling.svg" width="180" height="180" alt="En ikon på en växt i en kruka.">
-          </figure>
-        </div>
+        <figure class="section-label section-label--plant">
+          <img src="/Assets/images/icon-seedling.svg" width="180" height="180" alt="En ikon på en växt i en kruka.">
+        </figure>
       </div>
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="page-footer">
     <section>
-      <aside>
+      <aside class="page-footer__content">
         <figure class="logotype">
           <svg width="214" height="210" viewBox="0 0 214 210" xmlns="http://www.w3.org/2000/svg">
             <g fill="none">
@@ -156,13 +152,13 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias
           perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius
           molestias?</p>
-        <ul role="list">
-          <li><a href="tel:020-1234567" class="link-tel">Telefon: 020-1234567</a></li>
-          <li><a href="mailto:info@plannedplant.com" class="link-mail">info@plannedplant.com</a></li>
+        <ul class="contact-links" role="list">
+          <li><a href="tel:020-1234567" class="contact-links__phone">Telefon: 020-1234567</a></li>
+          <li><a href="mailto:info@plannedplant.com" class="contact-links__email">info@plannedplant.com</a></li>
         </ul>
       </aside>
-      <nav>
-        <ul role="list" class="mode-desktop">
+      <nav class="page-footer__nav" data-desktop>
+        <ul role="list">
           <li><a href="#/">Hem</a></li>
           <li><a href="#">Historik</a></li>
           <li><a href="#">Tips</a></li>
