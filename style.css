@@ -213,7 +213,7 @@ figure.logotype {
   }
 }
 
-figure.label {
+div.label {
   min-width: 220px;
   min-height: 220px;
   max-width: 220px;
@@ -222,6 +222,10 @@ figure.label {
   background-color: var(--clr-accent);
   padding: 56px;
   order: -1;
+
+  &.label-plant {
+    padding: 34px 36px 0 65px;
+  }
 
   img {
     object-fit: fill;
@@ -510,7 +514,7 @@ main div:is(.main-newsletter, .main-history) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-width: 768px;
+  max-width: 800px;
   margin-inline: auto;
 
   aside, form {
@@ -602,7 +606,7 @@ main .main-list {
   }
 
   .watermark {
-    background-image: url(/Assets/images/icon-seedling.svg);
+    background-image: url(/Assets/images/icon-seedling-2.svg);
     background-size: contain;
     background-size: 50%;
     background-repeat: no-repeat;

@@ -37,6 +37,7 @@
       </nav>
       <nav class="mode-mobile">
         <a href="#">
+          <small class="visually-hidden">Hamburgermeny</small>
           <svg width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="_icons">
               <path d="M5,7h14c0.6,0,1-0.4,1-1s-0.4-1-1-1H5C4.4,5,4,5.4,4,6S4.4,7,5,7z" />
@@ -56,12 +57,12 @@
         <h2>Uppskattade växter</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
         <ul class="img-composite" role="list">
-          <li data-debug><img src="https://picsum.photos/id/100/400" width="100" height="100" alt=""></li>
-          <li data-debug><img src="https://picsum.photos/id/200/400" width="100" height="100" alt=""></li>
-          <li data-debug><img src="https://picsum.photos/id/300/400" width="100" height="100" alt=""></li>
-          <li data-debug><img src="https://picsum.photos/id/400/400" width="100" height="100" alt=""></li>
-          <li data-debug><img src="https://picsum.photos/id/500/400" width="100" height="100" alt=""></li>
-          <li data-debug><img src="https://picsum.photos/id/600/400" width="100" height="100" alt=""></li>
+          <li data-debug><img src="https://picsum.photos/id/100/400" width="100" height="100" alt="Slumpad kollagebild 1"></li>
+          <li data-debug><img src="https://picsum.photos/id/200/400" width="100" height="100" alt="Slumpad kollagebild 2"></li>
+          <li data-debug><img src="https://picsum.photos/id/300/400" width="100" height="100" alt="Slumpad kollagebild 3"></li>
+          <li data-debug><img src="https://picsum.photos/id/400/400" width="100" height="100" alt="Slumpad kollagebild 4"></li>
+          <li data-debug><img src="https://picsum.photos/id/500/400" width="100" height="100" alt="Slumpad kollagebild 5"></li>
+          <li data-debug><img src="https://picsum.photos/id/600/400" width="100" height="100" alt="Slumpad kollagebild 6"></li>
         </ul>
       </div>
     </section>
@@ -72,14 +73,17 @@
         <aside>
           <form>
             <h2 id="aria-newsletter">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+            <label for="newsletter_email" class="visually-hidden">Email</label>
             <input type="email" name="" id="newsletter_email" placeholder="email@domain.com" maxlength="50"
               aria-describedby="aria-newsletter">
             <button class="button button-primary">SKICKA</button>
           </form>
         </aside>
-        <figure class="label label-plant">
-          <img src="/Assets/images/icon-planting.svg" width="180" height="180" alt="">
-        </figure>
+        <div class="label label-seed">
+          <figure>
+            <img src="/Assets/images/icon-planting.svg" width="180" height="180" alt="En ikon på plantering av frön.">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -88,6 +92,30 @@
         <!-- List -->
         <h2 class="visually-hidden">Odlingar</h2>
         <ul class="card-list" id="posts" role="list">
+
+          <!--<li class="card-item">
+            <article>
+              <figure>
+                <img src="" width="200" height="250" alt="växt">
+              </figure>
+              <div class="watermark"></div>
+              <ul class="tags">
+                <li data-flower>Tagg</li>
+              </ul>
+              <h3>Titel</h3>
+              <p>Innehåll.</p>
+              <footer>
+                <figure>
+                  <img src="" width="100" height="100" alt="avatar">
+                </figure>
+                <aside>
+                  <p>Användare</p>
+                  <time datetime="2025-01-01">2025-01-01</time>
+                </aside>
+              </footer>
+            </article>
+          </li>-->
+
         </ul>
       </div>
     </section>
@@ -102,9 +130,11 @@
             quaerat doloribus?</p>
           <a href="#" class="button">Planterade plantor</a>
         </aside>
-        <figure class="label label-seed">
-          <img src="/Assets/images/icon-seedling.svg" width="180" height="180" alt="">
-        </figure>
+        <div class="label label-plant">
+          <figure>
+            <img src="/Assets/images/icon-seedling.svg" width="180" height="180" alt="En ikon på en växt i en kruka.">
+          </figure>
+        </div>
       </div>
     </section>
   </main>
